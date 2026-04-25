@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Contact | Portfolio</title>
+
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/contact.css"/>
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Logo">
+      <span class="animate-shine">jc.labastida</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+
+    <div class="nav-controls">
+      <button id="themeToggle" class="theme-toggle">
+        <span class="icon"></span>
+      </button>
+    </div>
+
+  </nav>
+</header>
+
+<section class="contact-page">
+
+  <div class="contact-header">
+    <span class="section-tag">
+      <i data-lucide="send"></i> Get In Touch
+    </span>
+
+    <h1>Send Me a Message</h1>
+
+    <p class="contact-subtitle">
+      I am open to collaborations, commissions, and opportunities. Feel free to reach out anytime.
+    </p>
+  </div>
+
+  <div class="contact-grid">
+
+    <!-- FORM -->
+    <div class="contact-card">
+
+      <h2><i data-lucide="mail"></i> Contact Form</h2>
+
+      <form id="contact-form">
+
+        <div class="input-group">
+          <label><i data-lucide="user"></i> Name</label>
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+
+        <div class="input-group">
+          <label><i data-lucide="at-sign"></i> Email</label>
+          <input type="email" name="email" placeholder="your@email.com" required>
+        </div>
+
+        <div class="input-group">
+          <label><i data-lucide="tag"></i> Subject</label>
+          <input type="text" name="subject" placeholder="Subject">
+        </div>
+
+        <div class="input-group">
+          <label><i data-lucide="message-square"></i> Message</label>
+          <textarea name="message" rows="6" placeholder="Your message..." required></textarea>
+        </div>
+
+        <button type="submit" class="contact-btn">
+          <i data-lucide="send"></i> Send Message
+        </button>
+
+        <p id="status"></p>
+
+      </form>
+
+    </div>
+
+    <!-- INFO -->
+    <div class="contact-info-column">
+
+      <div class="contact-card">
+
+        <h2><i data-lucide="info"></i> Contact Information</h2>
+
+        <p><i data-lucide="mail"></i> jasmenlabastida@gmail.com</p>
+        <p><i data-lucide="phone"></i> +63 992 226 6884</p>
+        <p><i data-lucide="map-pin"></i> Philippines</p>
+
+      </div>
+
+      <div class="contact-card">
+
+        <h2><i data-lucide="link"></i> Social Links</h2>
+
+        <ul class="social-links">
+
+          <li>
+            <a href="https://github.com/Sie08" target="_blank">
+              <span><i data-lucide="github"></i> GitHub</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.facebook.com/frincesnicole08" target="_blank">
+              <span><i data-lucide="facebook"></i> Facebook</span>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer class="footer">
+  <p>© 2026 Jasmen Chelsie Labastida. All rights reserved.</p>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Projects | Portfolio</title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/projects.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar">
+
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Logo">
+      <span class="animate-shine">jc.labastida</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-controls">
+      <button id="themeToggle" class="theme-toggle">
+        <span class="icon"></span>
+      </button>
+    </div>
+
+  </nav>
+</header>
+
+<!-- PROJECT SECTION -->
+<section class="projects">
+
+  <div class="projects-header">
+    <h1>My Projects</h1>
+    <p>Selected works showcasing design, development, and systems I built.</p>
+  </div>
+
+  <div class="projects-grid">
+
+  <!-- PROJECT 1 -->
+  <div class="project-card">
+
+    <video class="project-media" autoplay muted loop>
+      <source src="images/resort.mp4" type="video/mp4">
+    </video>
+
+    <div class="project-content">
+      <h2>Beach Reservation System Presentation</h2>
+
+      <p class="short">
+        Web-based resort reservation and management system presentation.
+      </p>
+
+      <button class="view-btn" onclick="toggleProject(this)">
+        View Details
+      </button>
+
+      <div class="details">
+        <h3>Description</h3>
+        <p>Template presentation for resort reservation system proposal.</p>
+
+        <h3>Technologies</h3>
+        <p>Canva</p>
+
+        <h3>Link</h3>
+        <a href="https://canva.link/sn13p412ohhqmyr" target="_blank">View Presentation</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PROJECT 2 -->
+  <div class="project-card">
+
+    <video class="project-media" autoplay muted loop>
+      <source src="images/flowers.mp4" type="video/mp4">
+    </video>
+
+    <div class="project-content">
+      <h2>Flower Bouquet Collection Template</h2>
+
+      <p class="short">
+        Social media marketing design for flower business.
+      </p>
+
+      <button class="view-btn" onclick="toggleProject(this)">
+        View Details
+      </button>
+
+      <div class="details">
+        <h3>Description</h3>
+        <p>Facebook marketing design for flower bouquet business.</p>
+
+        <h3>Technologies</h3>
+        <p>Canva</p>
+
+        <h3>Link</h3>
+        <a href="https://canva.link/b103loiuvej6o7j" target="_blank">View Design</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PROJECT 3 -->
+  <div class="project-card">
+
+    <video class="project-media" autoplay muted loop>
+      <source src="images/movingball.mp4" type="video/mp4">
+    </video>
+
+    <div class="project-content">
+      <h2>Tap the Moving Ball</h2>
+
+      <p class="short">
+        Android game with scoring system and random movement.
+      </p>
+
+      <button class="view-btn" onclick="toggleProject(this)">
+        View Details
+      </button>
+
+      <div class="details">
+        <h3>Description</h3>
+        <p>Simple tap game with dynamic movement and score tracking.</p>
+
+        <h3>Technologies</h3>
+        <p>Java, Android Studio, XML</p>
+
+        <h3>Features</h3>
+        <p>Score system, touch interaction, random movement</p>
+
+        <h3>Link</h3>
+        <a href="images/movingball.mp4" target="_blank" class="video-link">
+          ▶ Watch The Video
+        </a>
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Jasmen Chelsie Labastida. All rights reserved.</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/projects.js"></script>
+
+</body>
+</html>
