@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Contact | Portfolio</title>
+    <title>jc.labastida</title>
+    <link rel="icon" href="images/icon.png" type="image/png">
 
   <link rel="stylesheet" href="css/main.css"/>
   <link rel="stylesheet" href="css/contact.css"/>
@@ -58,34 +59,44 @@
 
       <h2><i data-lucide="mail"></i> Contact Form</h2>
 
-      <form id="contact-form">
+      <form
+        id="contact-form"
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field">
+        
+        <input type="hidden" name="form-name" value="contact">
+
+        <p style="display:none;">
+          <label>Don't fill this out: <input name="bot-field"></label>
+        </p>
 
         <div class="input-group">
-          <label><i data-lucide="user"></i> Name</label>
+          <label>Name</label>
           <input type="text" name="name" placeholder="Your Name" required>
         </div>
 
         <div class="input-group">
-          <label><i data-lucide="at-sign"></i> Email</label>
+          <label>Email</label>
           <input type="email" name="email" placeholder="your@email.com" required>
         </div>
 
         <div class="input-group">
-          <label><i data-lucide="tag"></i> Subject</label>
+          <label>Subject</label>
           <input type="text" name="subject" placeholder="Subject">
         </div>
 
         <div class="input-group">
-          <label><i data-lucide="message-square"></i> Message</label>
+          <label>Message</label>
           <textarea name="message" rows="6" placeholder="Your message..." required></textarea>
         </div>
 
         <button type="submit" class="contact-btn">
-          <i data-lucide="send"></i> Send Message
+          Send Message
         </button>
 
         <p id="status"></p>
-
       </form>
 
     </div>
@@ -141,6 +152,7 @@
 </script>
 
 <script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="js/contact.js"></script>
 
 </body>

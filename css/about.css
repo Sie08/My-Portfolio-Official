@@ -1,0 +1,265 @@
+/* =========================
+   ABOUT PAGE (ELITE VIOLET v3 - UPGRADED + ICON FIXED)
+========================= */
+
+.about{
+  max-width:1100px;
+  margin:auto;
+
+  padding:110px 20px;
+
+  display:flex;
+  flex-direction:column;
+  gap:50px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.about-hero{
+  text-align:center;
+  position:relative;
+  padding-bottom:10px;
+}
+
+.about-hero h1{
+  font-size:clamp(2.4rem,4.5vw,3.2rem);
+  font-weight:700;
+  letter-spacing:-0.03em;
+}
+
+.about-hero p{
+  margin-top:12px;
+  color:var(--muted);
+  max-width:680px;
+  margin-inline:auto;
+  line-height:1.75;
+}
+
+
+/* glow */
+.about-hero::before{
+  content:"";
+  position:absolute;
+
+  width:420px;
+  height:420px;
+
+  top:-120px;
+  left:50%;
+  transform:translateX(-50%);
+
+  background:radial-gradient(
+    circle,
+    rgba(124,58,237,.12),
+    transparent 70%
+  );
+
+  z-index:-1;
+}
+
+/* =========================
+   CARD SYSTEM
+========================= */
+
+.card{
+  position:relative;
+  overflow:hidden;
+
+  background:var(--surface);
+  border:1px solid var(--border);
+
+  border-radius:18px;
+  padding:30px;
+
+  box-shadow:var(--shadow);
+
+  transition:0.35s ease;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow-hover);
+}
+
+/* glow */
+.card::before{
+  content:"";
+  position:absolute;
+
+  width:160px;
+  height:160px;
+
+  top:-50px;
+  right:-50px;
+
+  background:radial-gradient(
+    circle,
+    rgba(124,58,237,.18),
+    transparent 70%
+  );
+
+  z-index:0;
+}
+
+.card *{
+  position:relative;
+  z-index:1;
+}
+
+.card h2{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  font-size:1.35rem;
+  font-weight:800;
+  margin-bottom:16px;
+  color:var(--text);
+}
+
+.card p{
+  text-align: justify;
+  color:var(--muted);
+  line-height:1.85;
+  font-size:0.98rem;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.about-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+}
+
+/* =========================
+   LIST ITEMS
+========================= */
+
+.card ul{
+  list-style:none;
+
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.card ul li{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  padding:12px 14px;
+  border-radius:12px;
+
+  border:1px solid var(--border);
+  background:rgba(255,255,255,0.35);
+
+  color:var(--muted);
+
+  transition:0.25s ease;
+}
+
+/* dark mode */
+body.dark-mode .card ul li{
+  background:rgba(255,255,255,0.03);
+}
+
+/* hover */
+.card ul li:hover{
+  transform:translateX(6px);
+  border-color:var(--primary);
+  color:var(--text);
+}
+
+/* =========================
+   ICON SYSTEM (FIXED + MATCH CONTACT STYLE)
+========================= */
+
+/* ICONS IN TITLE */
+.card h2 svg{
+  width:18px;
+  height:18px;
+  color:var(--primary);
+  flex-shrink:0;
+}
+
+/* ICONS IN LIST */
+.card ul li svg{
+  width:16px;
+  height:16px;
+  color:var(--primary);
+  flex-shrink:0;
+}
+
+/* subtle hover icon scale */
+.card ul li:hover svg{
+  transform:scale(1.1);
+  transition:0.2s ease;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width:768px){
+
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about{
+    padding:80px 18px;
+  }
+
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+.card,
+.about-hero{
+  animation:fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(18px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* shine (logo reuse safe) */
+.animate-shine{
+  background:linear-gradient(
+    90deg,
+    var(--text),
+    var(--primary),
+    var(--accent),
+    var(--primary),
+    var(--text)
+  );
+
+  background-size:200% auto;
+  background-position:0% center;
+
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  animation:shine 3s linear infinite;
+}
+
+@keyframes shine{
+  0%{ background-position:0% center; }
+  100%{ background-position:200% center; }
+}
